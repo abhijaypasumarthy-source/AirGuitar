@@ -1,0 +1,231 @@
+:root {
+    --bg-color: #0a0a0f;
+    --text-color: #e0e0e0;
+    --accent: #00f0ff;
+    --accent-glow: 0 0 10px rgba(0, 240, 255, 0.5);
+    --card-bg: #151520;
+    --nav-bg: rgba(10, 10, 15, 0.9);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Space Grotesk', sans-serif;
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    padding: 20px 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: var(--nav-bg);
+    backdrop-filter: blur(10px);
+    z-index: 1000;
+}
+
+.logo {
+    font-weight: 700;
+    font-size: 1.5rem;
+    color: var(--accent);
+    letter-spacing: 2px;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+}
+
+.nav-links a {
+    color: var(--text-color);
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color: var(--accent);
+}
+
+.hero {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background: radial-gradient(circle at center, #1a1a2e 0%, var(--bg-color) 70%);
+}
+
+.hero h1 {
+    font-size: 4rem;
+    margin-bottom: 20px;
+    background: linear-gradient(90deg, #fff, var(--accent));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.btn {
+    display: inline-block;
+    margin-top: 30px;
+    padding: 15px 30px;
+    background: transparent;
+    border: 1px solid var(--accent);
+    color: var(--accent);
+    text-decoration: none;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: all 0.3s;
+    box-shadow: var(--accent-glow);
+}
+
+.btn:hover {
+    background: var(--accent);
+    color: var(--bg-color);
+}
+
+.section {
+    padding: 100px 10vw;
+}
+
+.section.dark {
+    background-color: #050508;
+}
+
+h2 {
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+    text-align: center;
+    color: #fff;
+}
+
+.section-desc {
+    text-align: center;
+    max-width: 600px;
+    margin: 0 auto 50px auto;
+    color: #aaa;
+}
+
+.grid-2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+}
+
+.card {
+    background: var(--card-bg);
+    padding: 40px;
+    border-radius: 10px;
+    border-top: 3px solid var(--accent);
+    transition: transform 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.card h3 {
+    font-size: 1.5rem;
+    color: var(--accent);
+    margin-bottom: 10px;
+}
+
+.card ul {
+    margin-top: 20px;
+    list-style-position: inside;
+    color: #bbb;
+}
+
+/* Architecture Visual */
+.architecture-visual {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    margin-top: 50px;
+}
+
+.arch-box {
+    background: var(--card-bg);
+    padding: 20px 40px;
+    border-radius: 8px;
+    text-align: center;
+    border: 1px solid #333;
+    font-weight: bold;
+}
+
+.arch-box span {
+    font-size: 0.8rem;
+    color: var(--accent);
+    font-weight: normal;
+}
+
+.arch-box.center {
+    border-color: var(--accent);
+    box-shadow: var(--accent-glow);
+}
+
+.arch-line {
+    width: 50px;
+    height: 2px;
+    background: var(--accent);
+    position: relative;
+}
+
+/* Timeline */
+.timeline {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.timeline-item {
+    background: var(--card-bg);
+    padding: 30px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    border-left: 4px solid #444;
+}
+
+.timeline-item:last-child {
+    border-left-color: var(--accent);
+}
+
+.rejected { color: #ff4757; font-weight: bold; font-size: 0.9rem; margin-bottom: 10px; }
+.selected { color: #2ed573; font-weight: bold; font-size: 0.9rem; margin-bottom: 10px; }
+
+.future-list {
+    max-width: 600px;
+    margin: 0 auto;
+    list-style: none;
+}
+
+.future-list li {
+    padding: 15px;
+    background: var(--card-bg);
+    margin-bottom: 10px;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+}
+
+.future-list li::before {
+    content: "🚀";
+    margin-right: 15px;
+}
+
+footer {
+    text-align: center;
+    padding: 40px;
+    background: #050508;
+    color: #666;
+}
